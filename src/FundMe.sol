@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import {AggregatorV3Interface} from "https://raw.githubusercontent.com/smartcontractkit/chainlink/contracts-v1.3.0/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConverter.sol";
 
 error FundMe__NotOwner();
@@ -24,6 +24,7 @@ contract FundMe {
 
     constructor(address priceFeed) {
         i_owner = msg.sender;
+        // Sepolida ETH/USD = 0x694AA1769357215DE4FAC081bf1f309aDC325306
         s_priceFeed = AggregatorV3Interface(priceFeed);
     }
 
