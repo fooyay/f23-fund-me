@@ -1,0 +1,14 @@
+{
+	// Make the Solidity extension understand Foundry-style imports
+	"solidity.packageDefaultDependenciesDirectory": "lib",
+	"solidity.packageDefaultDependenciesContractsDirectory": "",
+	"solidity.remappings": [
+		"@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/",
+		"chainlink-brownie-contracts/=lib/chainlink-brownie-contracts/",
+		"ds-test/=lib/forge-std/lib/ds-test/src/",
+		"forge-std/=lib/forge-std/src/",
+		"foundry-devops/=lib/foundry-devops/src/"
+	],
+	// Use a matching compiler version for editor diagnostics (tests use Foundry's).
+	"solidity.compileUsingRemoteVersion": "v0.8.18+commit.87f61d96"
+}
